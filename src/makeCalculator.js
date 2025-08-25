@@ -22,14 +22,18 @@ function makeCalculator() {
 
     operate(callback, number) {
       this.result = callback(this.result, number);
+      // calculator.result = callback(calculator.result, number);
 
       return this; // allows chaining
+      // return calculator; // chainable
     },
 
     reset() {
       this.result = 0;
+      // calculator.result = 0;
 
       return this; // allows chaining
+      // return calculator; // chainable
     },
   };
 
