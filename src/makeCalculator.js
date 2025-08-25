@@ -21,6 +21,9 @@ function makeCalculator() {
     },
 
     operate(callback, number) {
+      if (typeof callback !== 'function') {
+        throw new TypeError('Callback must be a function');
+      }
       this.result = callback(this.result, number);
       // calculator.result = callback(calculator.result, number);
 
